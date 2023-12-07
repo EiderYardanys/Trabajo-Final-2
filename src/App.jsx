@@ -8,13 +8,18 @@ import NavBar from './Componentes/NavBar/NavBar'
 
 function App() {
 
+  const handleLogin = () => {
+    console.log('Usuario a iniciado sesion');
+  }
+
 
   return (
     <>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Login onLogin={handleLogin}/>} />
         <Route path="/tarjetas" element={<ContenedorTarjetas />} />
+
       </Routes>
       <Footer />
     </>
